@@ -6,55 +6,93 @@ function computerPlay(){
     return computerOptions[res];
 }
 
-function round(playerS, computerS){
+let win = 0;
+let lose = 0;
 
-    playerS = playerS.toLowerCase();
-    computerS = computerS.toLowerCase();
+function round(playerS, computerS){
 
     if (playerS == "rock"){
         switch (computerS){
             case "rock":
-                return (`You played: ${playerS}\nComputer played: ${computerS}\nTie! You both played rock.`);
-                break;
+                console.log(`You played: ${playerS}\nComputer played: ${computerS}\nTie! You both played rock.`);
+                return;
             case "paper":
-                return (`You played: ${playerS}\nComputer played: ${computerS}\nYou lose! Paper beats rock.`);
-                break;
+                lose++;
+                console.log(`You played: ${playerS}\nComputer played: ${computerS}\nYou lose! Paper beats rock.`);
+                return;
             case "scissors":
-                return (`You played: ${playerS}\nComputer played: ${computerS}\nYou win! Rock beats scissors.`);
-                break;
+                win++;
+                console.log(`You played: ${playerS}\nComputer played: ${computerS}\nYou win! Rock beats scissors.`);
+                return;
         }
     }
 
     else if (playerS == "paper"){
         switch (computerS){
             case "paper":
-                return (`You played: ${playerS}\nComputer played: ${computerS}\nTie! You both played paper.`);
-                break;
+                console.log(`You played: ${playerS}\nComputer played: ${computerS}\nTie! You both played paper.`);
+                return;
             case "rock":
-                return (`You played: ${playerS}\nComputer played: ${computerS}\nYou win! Paper beats rock.`);
-                break;
+                win++;
+                console.log(`You played: ${playerS}\nComputer played: ${computerS}\nYou win! Paper beats rock.`);
+                return;
             case "scissors":
-                return (`You played: ${playerS}\nComputer played: ${computerS}\nYou lose! Scissors beat paper.`);
-                break;
+                lose++;
+                console.log(`You played: ${playerS}\nComputer played: ${computerS}\nYou lose! Scissors beat paper.`);
+                return;
         }
     }
 
     else if (playerS == "scissors"){
         switch (computerS){
             case "scissors":
-                return (`You played: ${playerS}\nComputer played: ${computerS}\nTie! You both played scissors.`);
-                break;
+                console.log(`You played: ${playerS}\nComputer played: ${computerS}\nTie! You both played scissors.`);
+                return;
             case "paper":
-                return (`You played: ${playerS}\nComputer played: ${computerS}\nYou win! Scissors beat paper.`);
-                break;
+                win++;
+                console.log(`You played: ${playerS}\nComputer played: ${computerS}\nYou win! Scissors beat paper.`);
+                return;
             case "rock":
-                return (`You played: ${playerS}\nComputer played: ${computerS}\nYou lose! Rock beats scissors.`);
-                break;
+                lose++;
+                console.log(`You played: ${playerS}\nComputer played: ${computerS}\nYou lose! Rock beats scissors.`);
+                return;
         }
     }
 }
 
-const playerMove = "rock";
-const computerMove = computerPlay();
+function game(){
+    let i = 0;
 
-console.log(round(playerMove, computerMove));
+    while (i < 5){
+        let input = prompt(`Round: ${i+1}\nRock, Paper, or Scissors?`);
+        playerMove = input.toLowerCase();
+
+        switch(playerMove){
+            case "rock":
+                break;
+            case "paper":
+                break;
+            case "scissors":
+                break;
+            default:
+                alert("Invalid input!");
+                continue;
+        }
+        
+        round(playerMove, computerPlay());
+
+        i++;
+    }
+
+    if (win > lose){
+        console.log(`Wins: ${win}\nLosses: ${lose}\nYou win!`)
+    }
+    else if (win == lose) {
+        console.log(`Wins: ${win}\nLosses: ${lose}\nYou tie!`)
+    }
+    else {
+        console.log(`Wins: ${win}\nLosses: ${lose}\nYou lose!`)
+    }
+}
+
+game();
