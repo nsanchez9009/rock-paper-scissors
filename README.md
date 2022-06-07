@@ -1,0 +1,1 @@
+Currently only avaiable to be played within the console.
