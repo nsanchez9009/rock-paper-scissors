@@ -64,7 +64,7 @@ function game(){
     let i = 0;
 
     while (i < 5){
-        let input = prompt(`Round: ${i+1}\nRock, Paper, or Scissors?`);
+        let input = prompt(`Round: ${i+1}/5\nRock, Paper, or Scissors?`);
         playerMove = input.toLowerCase();
 
         switch(playerMove){
