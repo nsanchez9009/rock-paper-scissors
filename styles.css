@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+    background-color: rgb(46, 46, 46);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+}
+
+.text {
+    color: white;
+    font-family: "Roboto Mono";
+    font-size: 24px;
+}
+
+.gameHeader {
+    font-size: 30px;
+}
+
+.computer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(./media/computer.png);
+    background-position: center;
+    background-size: contain;
+
+    z-index: 0;
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+}
+
+.cMove {
+    margin-bottom: 50px;
+}
+
+.scoreContainer{
+    border: 2px solid blue;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    height: 230px;
+    width: 230px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.moveContainer {
+    border: 2px solid green;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.move {
+    border: 2px solid red;
+
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    width: 250px;
+
+}
+
+.move .text {
+    font-size: 30px;
+}
+
+.textRed {
+    color: red;
+}
+
+.textGreen {
+    color: green;
+}
