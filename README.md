@@ -1,4 +1,4 @@
-##ROCK PAPER SCISSORS
+## ROCK PAPER SCISSORS
 ---
 Rock paper scissors game where you play against a computer. First to 5 points wins!
 <br><br>
