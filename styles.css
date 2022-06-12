@@ -35,11 +35,10 @@ body {
 
 .cMove {
     margin-bottom: 50px;
+    color: rgb(59, 219, 59);
 }
 
 .scoreContainer{
-    border: 2px solid blue;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,13 +49,9 @@ body {
     width: 230px;
 
     margin-top: 20px;
-    margin-bottom: 20px;
-
 }
 
 .moveContainer {
-    border: 2px solid green;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,12 +59,9 @@ body {
     
     gap: 20px;
     padding: 20px;
-
 }
 
 .move {
-    border: 2px solid red;
-
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -78,17 +70,9 @@ body {
 
     box-sizing: border-box;
     width: 250px;
-
 }
 
 .move .text {
     font-size: 30px;
 }
 
-.textRed {
-    color: red;
-}
-
-.textGreen {
-    color: green;
-}
